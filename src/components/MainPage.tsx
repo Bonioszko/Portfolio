@@ -4,7 +4,7 @@ import Me from "../../public/Me.jpg";
 function MainPage() {
     return (
         <div className="h-full flex flex-col justify-center items-end animate-fadeIn ">
-            <div className="h-3/4 w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex items-center  rounded-3xl">
+            <div className="h-3/4 w-full sm:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col sm:flex-row items-center  rounded-3xl">
                 <div className="h-full w-1/2 flex flex-col justify-center items-center">
                     {" "}
                     <h1 className="te text-7xl font-bold text-white ">
@@ -28,8 +28,8 @@ function MainPage() {
                         </a>
                     </div>
                 </div>
-                <div className="h-full w-1/2 flex items-center ">
-                    <div className="w-1/2">
+                <div className="h-full w-1/2 hidden sm:flex items-center justify-center">
+                    <div className="w-1/2 flex justify-center">
                         <img
                             src={Me}
                             alt=""
