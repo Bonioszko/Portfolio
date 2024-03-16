@@ -1,7 +1,9 @@
 import GithubIcon from "../assets/icons/GithubIcon";
 import LiveSiteIcon from "../assets/icons/LiveSiteIcon";
 import ReactLogo from "../../public/react-2.svg";
+import TailwindLogo from "../../public/tailwind-svgrepo-com.svg";
 import MongoDBLogo from "../../public/mongodb-icon-1.svg";
+import TypescriptLogo from "../../public/typescript-16-svgrepo-com.svg";
 import ExpressLogo from "../../public/express-109.svg";
 type TechnologyLogos = {
     [key: string]: string;
@@ -10,6 +12,8 @@ const technologyLogos: TechnologyLogos = {
     React: ReactLogo,
     Express: ExpressLogo,
     MongoDB: MongoDBLogo,
+    Tailwind: TailwindLogo,
+    Typescript: TypescriptLogo,
 };
 type ProjectProps = {
     name: string;
@@ -38,11 +42,11 @@ const CurrentProject: React.FC<ProjectProps> = ({
                         <img
                             src={imageLink}
                             alt={name}
-                            className="w-full rounded-3xl"
+                            className="w-full rounded-3xl border-2"
                         />
                     </div>
                     <div className=" h-13 w-full flex flex-col items-center gap-5">
-                        <h1 className="col text-white text-5xl">TrainingApp</h1>
+                        <h1 className="col text-text-color text-5xl">{name}</h1>
                         <div className="flex justify-center gap-5  ">
                             {technologies.map((technology) => (
                                 <img
@@ -54,7 +58,7 @@ const CurrentProject: React.FC<ProjectProps> = ({
                             ))}
                         </div>
 
-                        <p className="text-white">{description}</p>
+                        <p className="text-text-color">{description}</p>
                         <div className="flex justify-center gap-3">
                             <a
                                 href={githubLink}

@@ -1,16 +1,28 @@
 import GithubIcon from "../assets/icons/GithubIcon";
 import LinkedinIcon from "../assets/icons/LinkediIcon";
-import Me from "../../public/Me.jpg";
+import Me from "../../public/Me2.jpg";
+import Technology from "./Technology";
 function MainPage() {
     return (
         <div className="h-full flex flex-col justify-center items-end animate-fadeIn ">
-            <div className="h-3/4 w-full sm:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col sm:flex-row items-center  rounded-3xl">
+            <div className="h-3/4 w-full lg:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col sm:flex-row items-center  rounded-3xl">
                 <div className="h-full w-1/2 flex flex-col justify-center items-center">
                     {" "}
-                    <h1 className="te text-7xl font-bold text-white ">
+                    <h1 className="te text-7xl font-bold text-text-color ">
                         Bartosz Pers
                     </h1>
-                    <p>I want to change your website to be better</p>
+                    <div className="flex gap-3">
+                        <Technology text="React"></Technology>
+                        <Technology text="Express"></Technology>
+                        <Technology text="Python"></Technology>
+                        <Technology text="MongoDB"></Technology>
+                        <Technology text="SQL"></Technology>
+                        <Technology text="C++"></Technology>
+                    </div>
+                    <p className="text-text-color">
+                        I am third year computer science student at put. My
+                        passions besides web development is gym
+                    </p>
                     <div className="flex justify-center">
                         <a
                             href="https://github.com/Bonioszko"
@@ -28,7 +40,7 @@ function MainPage() {
                         </a>
                     </div>
                 </div>
-                <div className="h-full w-1/2 hidden sm:flex items-center justify-center">
+                <div className="h-full w-1/2 hidden lg:flex items-center justify-center">
                     <div className="w-1/2 flex justify-center">
                         <img
                             src={Me}

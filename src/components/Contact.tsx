@@ -41,11 +41,11 @@ export const Contact: React.FC = () => {
     //add captcha there
     return (
         <div className="h-full flex flex-col justify-center items-end animate-fadeIn ">
-            <div className="h-3/4 w-full sm:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col sm:flex-row items-center rounded-3xl p-7">
+            <div className="h-3/4 w-full lg:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col lg:flex-row items-center rounded-3xl p-7 lg:pl-64">
                 <form
                     ref={form}
                     onSubmit={sendEmail}
-                    className=" text-white flex flex-col justify-center items-center gap-2"
+                    className=" text-text-color flex flex-col justify-center items-center gap-2"
                 >
                     <h1 className="text-5xl font-bold">Contact me </h1>
                     <label>Name</label>
