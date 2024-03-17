@@ -5,7 +5,7 @@ import Technology from "./Technology";
 function MainPage() {
     return (
         <div className="h-full flex flex-col justify-center items-end animate-fadeIn ">
-            <div className="h-3/4 w-full lg:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col sm:flex-row items-center  rounded-3xl">
+            <div className="p-7 h-3/4 w-full lg:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col sm:flex-row items-center  rounded-3xl">
                 <div className="h-full w-1/2 flex flex-col justify-center items-center">
                     {" "}
                     <h1 className="te text-7xl font-bold text-text-color ">

@@ -45,7 +45,7 @@ import { useState } from "react";
 function ProjectCard() {
     const [active, setActive] = useState(0);
     return (
-        <div className="bg-gradient-to-l from-secondary-color to-primary-color w-full  lg:w-3/4 p-2 flex flex-col items-center gap-5 rounded-3xl">
+        <div className="p-7 bg-gradient-to-l from-secondary-color to-primary-color w-full  lg:w-3/4 p-2 flex flex-col items-center gap-5 rounded-3xl">
             <h1 className="text-text-color text-5xl font-bold">
                 Personal projects
             </h1>

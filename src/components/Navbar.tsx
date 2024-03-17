@@ -1,7 +1,7 @@
 import NavbarElement from "./NavbarElement";
 function Navbar() {
     return (
-        <div className=" w-full bg-secondary-color h-24 px-10 flex items-center justify-between ">
+        <div className=" w-full bg-primary-color h-24 px-10 f items-center justify-between flex">
             <NavbarElement text="PORTFOLIO"></NavbarElement>
             <div className="flex justify-normal gap-6">
                 <NavbarElement text="About Me"></NavbarElement>
