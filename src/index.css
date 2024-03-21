@@ -9,10 +9,18 @@
   --third-color: #35A29F;
   --fourth-color: #97FEED;
 } */
-:root{
+/* :root{
   --primary-color: #000000;
   --third-color:  #52057B;
   --secondary-color: #892CDC;
   --fourth-color: #BC6FF1;
   --text-color:white;
+} */
+
+:root{
+  --primary-color: #2B302B;
+  --third-color:  #52057B;
+  --secondary-color: #7CBB7D;
+  --fourth-color: #BC6FF1;
+  --text-color:black;
 }

@@ -1,10 +1,13 @@
 import GithubIcon from "../assets/icons/GithubIcon";
 import LiveSiteIcon from "../assets/icons/LiveSiteIcon";
-import ReactLogo from "../../public/react-2.svg";
-import TailwindLogo from "../../public/tailwind-svgrepo-com.svg";
-import MongoDBLogo from "../../public/mongodb-icon-1.svg";
-import TypescriptLogo from "../../public/typescript-16-svgrepo-com.svg";
-import ExpressLogo from "../../public/express-109.svg";
+import ReactLogo from "../../public/icons/react-2.svg";
+import TailwindLogo from "../../public/icons/tailwind-svgrepo-com.svg";
+import MongoDBLogo from "../../public/icons/mongodb-icon-1.svg";
+import TypescriptLogo from "../../public/icons/typescript-16-svgrepo-com.svg";
+import ExpressLogo from "../../public/icons/express-109.svg";
+import KotlinLogo from "../../public/icons/kotlin-16-svgrepo-com.svg";
+import SQLLogo from "../../public/icons/sql-file-format-svgrepo-com.svg";
+import cLogo from "../../public/icons/c.svg";
 type TechnologyLogos = {
     [key: string]: string;
 };
@@ -14,6 +17,9 @@ const technologyLogos: TechnologyLogos = {
     MongoDB: MongoDBLogo,
     Tailwind: TailwindLogo,
     Typescript: TypescriptLogo,
+    Kotlin: KotlinLogo,
+    SQL: SQLLogo,
+    C: cLogo,
 };
 type ProjectProps = {
     name: string;
@@ -67,13 +73,15 @@ const CurrentProject: React.FC<ProjectProps> = ({
                             >
                                 <GithubIcon className="fill-white hover:fill-green-500" />
                             </a>
-                            <a
-                                href={liveSiteLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <LiveSiteIcon className="fill-black hover:fill-red-600" />
-                            </a>
+                            {liveSiteLink && (
+                                <a
+                                    href={liveSiteLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <LiveSiteIcon className="fill-black hover:fill-red-600" />
+                                </a>
+                            )}
                         </div>
                     </div>{" "}
                 </>
