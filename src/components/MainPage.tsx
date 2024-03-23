@@ -2,11 +2,12 @@ import GithubIcon from "../assets/icons/GithubIcon";
 import LinkedinIcon from "../assets/icons/LinkediIcon";
 import Me from "../../public/Me2.jpg";
 import Technology from "./Technology";
+import { Section } from "./Section";
 function MainPage() {
     return (
-        <div className="h-full flex flex-col justify-center items-end animate-fadeIn ">
-            <div className="p-7 h-3/4 w-full lg:w-3/4 bg-gradient-to-r from-secondary-color to-primary-color flex flex-col sm:flex-row items-center  rounded-3xl">
-                <div className="h-full w-1/2 flex flex-col justify-center items-center">
+        <Section left={true}>
+            <div className="flex justify-center items-center">
+                <div className="h-full w-1/2 flex flex-col justify-center items-center gap-6">
                     {" "}
                     <h1 className="te text-7xl font-bold text-text-color ">
                         Bartosz Pers
@@ -50,7 +51,7 @@ function MainPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Section>
     );
 }
 

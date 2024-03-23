@@ -5,6 +5,7 @@ import GithubIcon from "../assets/icons/GithubIcon";
 import LiveSiteIcon from "../assets/icons/LiveSiteIcon";
 import CurrentProject from "./CurrentProject";
 import data from "../assets/helpers/projects.js";
+import { Section } from "./Section.js";
 import { useState } from "react";
 // const data = [
 //     {
@@ -45,7 +46,7 @@ import { useState } from "react";
 function ProjectCard() {
     const [active, setActive] = useState(0);
     return (
-        <div className="p-7 bg-gradient-to-l from-secondary-color to-primary-color w-full  lg:w-3/4 p-2 flex flex-col items-center gap-5 rounded-3xl">
+        <Section left={false}>
             <h1 className="text-text-color text-5xl font-bold">
                 Personal projects
             </h1>
@@ -65,7 +66,6 @@ function ProjectCard() {
                 ))}
             </div>
             <div className=" flex flex-col sm:flex-row gap-4">
-                {" "}
                 {data.map((project, index) => (
                     <CurrentProject
                         key={index}
@@ -79,62 +79,7 @@ function ProjectCard() {
                     ></CurrentProject>
                 ))}
             </div>
-
-            {/* <div className="w-3/5">
-                <div className="flex">
-                    {data.map((project) => (
-                        <div className="text-text-color"> {project.name}</div>
-                    ))}
-                </div>
-
-                <h1>asdasdasdasdasdasdasdasdasdasd</h1>
-                <img
-                    src="../../public/TrainingApp.jpg"
-                    alt="TrainingApp"
-                    className=" w-full rounded-3xl"
-                />
-            </div>
-
-            <div className=" h-13 w-full flex flex-col justify-center items-center gap-5">
-                <h1 className="col text-text-color text-3xl">TrainingApp</h1>
-                <div className="flex justify-center gap-5  ">
-                    <img src={ReactLogo} alt="" className="w-10 " />
-                    <img src={ExpressLogo} alt="" className="w-10 " />
-                    <img
-                        src={MongoDBLogo}
-                        alt=""
-                        className="w-10  text-black rounded-full"
-                    />
-                </div>
-
-                <p className="text-text-color">
-                    I wanted to create application to track my personal
-                    trainings. Application allows you to create your own
-                    trainings and exercises. Based on created trainings you can
-                    create specific training with repetitions, sets and weigth
-                    used. Interesting functionality is a built in timer, so you
-                    do not need to use separate application to track time
-                    between sets. To access content you need to firstly register
-                    and then login into you account
-                </p>
-                <div className="flex justify-center gap-3">
-                    <a
-                        href="https://github.com/Bonioszko/TrainingApp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <GithubIcon className="fill-white hover:fill-green-500" />
-                    </a>
-                    <a
-                        href="https://github.com/Bonioszko/TrainingApp"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <LiveSiteIcon className="fill-black hover:fill-red-600" />
-                    </a>
-                </div>
-            </div> */}
-        </div>
+        </Section>
     );
 }
 export default ProjectCard;

@@ -4,7 +4,7 @@ export default {
     theme: {
         extend: {
             animation: {
-                fadeIn: "fadeIn 2s ease-in-out",
+                fadeIn: "fadeIn 4s ease-in-out",
             },
             scale: ["active"],
             keyframes: {

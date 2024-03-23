@@ -9,6 +9,8 @@
   --third-color: #35A29F;
   --fourth-color: #97FEED;
 } */
+
+/* my colors */
 /* :root{
   --primary-color: #000000;
   --third-color:  #52057B;
@@ -16,11 +18,21 @@
   --fourth-color: #BC6FF1;
   --text-color:white;
 } */
-
-:root{
+/* green color */
+/* :root{
   --primary-color: #2B302B;
   --third-color:  #52057B;
   --secondary-color: #7CBB7D;
   --fourth-color: #BC6FF1;
   --text-color:black;
+} */
+
+
+:root{
+  --primary-color: #000000;
+  --secondary-color: #5aff51;
+  --third-color:  #3b48ff;
+
+  --fourth-color: #de3bff;
+  --text-color:#f7f6ff;
 }
