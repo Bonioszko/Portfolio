@@ -2,7 +2,7 @@ import { Section } from "./Section";
 
 function WorkExperience() {
     return (
-        <Section left={true}>
+        <Section left={true} id="work-experience">
             <h1 className="text-text-color text-5xl font-bold">
                 Work Experience
             </h1>

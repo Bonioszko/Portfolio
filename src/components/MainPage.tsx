@@ -5,11 +5,20 @@ import Technology from "./Technology";
 import { Section } from "./Section";
 function MainPage() {
     return (
-        <Section left={true}>
-            <div className="flex justify-center items-center">
-                <div className="h-full w-1/2 flex flex-col justify-center items-center gap-6">
+        <Section left={true} id="Main">
+            <div className="h-full w-full hidden lg:flex justify-end pr-36">
+                <div className="w-1/8 flex justify-center">
+                    <img
+                        src={Me}
+                        alt=""
+                        className="shadow rounded-full max-w-full h-auto align-middle border-none"
+                    />
+                </div>
+            </div>
+            <div className="flex justify-center items-center w-full">
+                <div className="h-full w-4/5 flex flex-col justify-center items-center gap-6">
                     {" "}
-                    <h1 className="te text-7xl font-bold text-text-color ">
+                    <h1 className="text-6xl sm:text-9xl font-bold text-text-color text-center">
                         Bartosz Pers
                     </h1>
                     <div className="flex gap-3">
@@ -20,11 +29,11 @@ function MainPage() {
                         <Technology text="SQL"></Technology>
                         <Technology text="C++"></Technology>
                     </div>
-                    <p className="text-text-color">
+                    <p className="text-text-color text-center text-lg sm:text-4xl">
                         I am third year computer science student at put. My
                         passions besides web development is gym
                     </p>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center gap-5">
                         <a
                             href="https://github.com/Bonioszko"
                             target="_blank"
@@ -39,15 +48,6 @@ function MainPage() {
                         >
                             <LinkedinIcon className="fill-white hover:fill-sky-600" />
                         </a>
-                    </div>
-                </div>
-                <div className="h-full w-1/2 hidden lg:flex items-center justify-center">
-                    <div className="w-1/2 flex justify-center">
-                        <img
-                            src={Me}
-                            alt=""
-                            className="shadow rounded-full max-w-full h-auto align-middle border-none"
-                        />
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ const data = [
     },
     {
         name: "Portfolio",
-        imageLink: "https://example.com/image2.jpg",
+        imageLink: "../../public/Portfolio.jpg",
         description:
             "This is my personal website to showcase myself and my skills in creating appealing and responsive webistes",
         technologies: ["React", "Tailwind", "Typescript"],

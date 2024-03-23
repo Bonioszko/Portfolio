@@ -46,8 +46,8 @@ import { useState } from "react";
 function ProjectCard() {
     const [active, setActive] = useState(0);
     return (
-        <Section left={false}>
-            <h1 className="text-text-color text-5xl font-bold">
+        <Section left={false} id="Projects">
+            <h1 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lime-300 to-green-400 ">
                 Personal projects
             </h1>
             <div className="flex gap-4">

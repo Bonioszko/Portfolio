@@ -34,6 +34,9 @@ export default {
             fontFamily: {
                 default: ["Mukta"],
             },
+            spacing: {
+                "1/8": "12.5%",
+            },
         },
     },
     plugins: [require("@tailwindcss/aspect-ratio")],

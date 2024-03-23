@@ -64,7 +64,7 @@ const CurrentProject: React.FC<ProjectProps> = ({
                             ))}
                         </div>
 
-                        <p className="text-text-color">{description}</p>
+                        <p className="text-text-color w-3/5">{description}</p>
                         <div className="flex justify-center gap-3">
                             <a
                                 href={githubLink}

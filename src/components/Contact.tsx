@@ -41,7 +41,7 @@ export const Contact: React.FC = () => {
     }
     //add captcha there
     return (
-        <Section left={true}>
+        <Section left={true} id="Contact">
             <form
                 ref={form}
                 onSubmit={sendEmail}
