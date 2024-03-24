@@ -1,11 +1,9 @@
 import { Section } from "./Section";
-
+import SectionHeading from "./SectionHeading";
 function WorkExperience() {
     return (
         <Section left={true} id="work-experience">
-            <h1 className="text-text-color text-5xl font-bold">
-                Work Experience
-            </h1>
+            <SectionHeading text="Work Experience"></SectionHeading>
             <div className="flex flex-col">
                 <h2 className="text-2xl bg-text-color text-primary-color p-2 rounded-xl">
                     Air Spiralo Poland -Information Communication Technology
