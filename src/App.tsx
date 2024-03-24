@@ -3,7 +3,7 @@ import MainPage from "./components/MainPage";
 import Projects from "./components/Projects";
 import { Contact } from "./components/Contact";
 import WorkExperience from "./components/WorkExperience";
-import AnimatedCursor from "react-animated-cursor";
+
 import "./App.css";
 
 function App() {

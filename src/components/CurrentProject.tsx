@@ -28,7 +28,7 @@ type ProjectProps = {
     description: string;
     technologies: string[];
     githubLink: string;
-    liveSiteLink: string;
+    liveSiteLink: string | null;
     active: boolean;
 };
 

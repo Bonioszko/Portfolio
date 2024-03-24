@@ -5,10 +5,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Section } from "./Section";
 import SectionHeading from "./SectionHeading";
-import { Fade, Slide } from "react-awesome-reveal";
-function onChange(value) {
-    console.log("Captcha value:", value);
-}
+import { Slide } from "react-awesome-reveal";
+
 export const Contact: React.FC = () => {
     const [captchaDone, setCaptchaDone] = useState(false);
     const form = useRef<HTMLFormElement>(null);

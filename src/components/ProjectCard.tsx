@@ -1,8 +1,3 @@
-import ReactLogo from "../../public/react-2.svg";
-import ExpressLogo from "../../public/express-109.svg";
-import MongoDBLogo from "../../public/mongodb-icon-1.svg";
-import GithubIcon from "../assets/icons/GithubIcon";
-import LiveSiteIcon from "../assets/icons/LiveSiteIcon";
 import CurrentProject from "./CurrentProject";
 import data from "../assets/helpers/projects.js";
 import { Section } from "./Section.js";
