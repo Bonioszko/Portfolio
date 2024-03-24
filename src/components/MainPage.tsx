@@ -1,26 +1,60 @@
-import Image from "next";
+import GithubIcon from "../assets/icons/GithubIcon";
+import LinkedinIcon from "../assets/icons/LinkediIcon";
+import Me from "../../public/Me2.jpg";
+import Technology from "./Technology";
+import { Section } from "./Section";
+import { Slide } from "react-awesome-reveal";
 function MainPage() {
     return (
-        <div className="d h-full flex flex-col justify-center items-end">
-            <div className="h-3/4 w-3/4 bg-third-color flex items-center">
-                <div className="h-full w-1/2 flex flex-col justify-center items-center">
-                    {" "}
-                    <h1 className="te text-7xl font-bold text-white ">
-                        Bartosz Pers
-                    </h1>
-                    <p>I want to change your website to be better</p>
-                </div>
-                <div className="h-full w-1/2 flex items-center">
-                    <div className="w-1/2">
+        <Slide triggerOnce={true} direction="right">
+            <Section left={true} id="Main">
+                <div className="h-full w-full hidden lg:flex justify-end pr-36">
+                    <div className="w-1/8 flex justify-center">
                         <img
-                            src="https://images.unsplash.com/photo-1514501259756-f4b6fbeffa67?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            src={Me}
                             alt=""
                             className="shadow rounded-full max-w-full h-auto align-middle border-none"
                         />
                     </div>
                 </div>
-            </div>
-        </div>
+                <div className="flex justify-center items-center w-full">
+                    <div className="h-full w-4/5 flex flex-col justify-center items-center gap-6">
+                        {" "}
+                        <h1 className="text-6xl sm:text-9xl font-bold text-text-color text-center">
+                            Bartosz Pers
+                        </h1>
+                        <div className="flex gap-3">
+                            <Technology text="React"></Technology>
+                            <Technology text="Express"></Technology>
+                            <Technology text="Python"></Technology>
+                            <Technology text="MongoDB"></Technology>
+                            <Technology text="SQL"></Technology>
+                            <Technology text="C++"></Technology>
+                        </div>
+                        <p className="text-text-color text-center text-lg sm:text-4xl">
+                            I am third year computer science student at put. My
+                            passions besides web development is gym
+                        </p>
+                        <div className="flex justify-center gap-5">
+                            <a
+                                href="https://github.com/Bonioszko"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <GithubIcon className="fill-white hover:fill-green-500" />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/bartosz-pers-5038812b9/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <LinkedinIcon className="fill-white hover:fill-sky-600" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </Section>
+        </Slide>
     );
 }
 

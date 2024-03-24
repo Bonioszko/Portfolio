@@ -9,9 +9,31 @@
   --third-color: #35A29F;
   --fourth-color: #97FEED;
 } */
-:root{
+
+/* my colors */
+/* :root{
   --primary-color: #000000;
   --third-color:  #52057B;
   --secondary-color: #892CDC;
   --fourth-color: #BC6FF1;
+  --text-color:white;
+} */
+/* green color */
+/* :root{
+  --primary-color: #2B302B;
+  --third-color:  #52057B;
+  --secondary-color: #7CBB7D;
+  --fourth-color: #BC6FF1;
+  --text-color:black;
+} */
+
+
+:root{
+  --primary-color: #19191D;
+  --secondary-color: #00CD29;
+  --third-color:  #3b48ff;
+
+  --fourth-color: #de3bff;
+  --text-color:#f7f6ff;
+  --test-color:#6C8EFF
 }
