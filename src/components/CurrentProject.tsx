@@ -4,10 +4,11 @@ import ReactLogo from "../../public/icons/react-2.svg";
 import TailwindLogo from "../../public/icons/tailwind-svgrepo-com.svg";
 import MongoDBLogo from "../../public/icons/mongodb-icon-1.svg";
 import TypescriptLogo from "../../public/icons/typescript-16-svgrepo-com.svg";
-import ExpressLogo from "../../public/icons/express-109.svg";
+import ExpressLogo from "../../public/icons/expressjs-icon.svg";
 import KotlinLogo from "../../public/icons/kotlin-16-svgrepo-com.svg";
 import SQLLogo from "../../public/icons/sql-file-format-svgrepo-com.svg";
 import cLogo from "../../public/icons/c.svg";
+
 type TechnologyLogos = {
     [key: string]: string;
 };
@@ -43,7 +44,7 @@ const CurrentProject: React.FC<ProjectProps> = ({
     return (
         <>
             {active ? (
-                <>
+                <div className="flex flex-col sm:flex-row gap-3 animate-slideInFromLeft">
                     <div className="w-full">
                         <img
                             src={imageLink}
@@ -79,12 +80,12 @@ const CurrentProject: React.FC<ProjectProps> = ({
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                    <LiveSiteIcon className="fill-black hover:fill-red-600" />
+                                    <LiveSiteIcon className="fill-text-color hover:fill-red-600" />
                                 </a>
                             )}
                         </div>
                     </div>{" "}
-                </>
+                </div>
             ) : (
                 <></>
             )}

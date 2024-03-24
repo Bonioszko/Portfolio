@@ -3,8 +3,12 @@ export default {
     content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            transitionProperty: {
+                "border-color": "border-color",
+            },
             animation: {
                 fadeIn: "fadeIn 4s ease-in-out",
+                slideInFromLeft: "slideInFromLeft 1s ease",
             },
             scale: ["active"],
             keyframes: {
@@ -18,6 +22,7 @@ export default {
                         transform: " translateX(-100%)",
                         opacity: "0",
                     },
+
                     "100%": {
                         transform: "translateX(0)",
                         opacity: "1",
@@ -30,6 +35,7 @@ export default {
                 "third-color": "var(--third-color)",
                 "fourth-color": "var(--fourth-color)",
                 "text-color": "var(--text-color)",
+                "test-color": "var(--test-color)",
             },
             fontFamily: {
                 default: ["Mukta"],

@@ -4,7 +4,7 @@ export const Section: React.FC<{
     id: string;
 }> = ({ left, children, id }) => {
     return (
-        <div className="h-full flex flex-col justify-center items-start animate-fadeIn  ">
+        <div className="h-full flex flex-col justify-center items-start  ">
             <div
                 id={`${id}`}
                 className={`h-3/4 w-full ${

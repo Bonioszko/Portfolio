@@ -18,9 +18,9 @@ const ProjectCard: React.FC = () => {
                     <h1
                         onClick={() => setActive(index)}
                         key={project.name}
-                        className={`text-text-color border-b-2 cursor-pointer transition-all duration-1000 ease-in-out ${
+                        className={`text-text-color border-b-2 font-semibold sm:text-xl cursor-pointer  ${
                             index === active
-                                ? " animate-slideInFromLeft  border-secondary-color"
+                                ? " transition-border-color  border-secondary-color"
                                 : "border-transparent"
                         }`}
                     >
