@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import SectionHeading from "./SectionHeading";
 import { Slide } from "react-awesome-reveal";
+import SingleResonsibility from "./SingleResponsibility";
 function WorkExperience() {
     return (
         <Slide triggerOnce={true} direction="right">
@@ -16,41 +17,25 @@ function WorkExperience() {
                     </h1>
 
                     <ul className="gap-4 flex flex-col">
-                        <li className="flex gap-4 items-center bg-primary-color rounded-xl p-3">
-                            <div className="w-1/12 h-1  bg-secondary-color rounded-lg"></div>
-                            <p className="text-text-color">
-                                Developing apps using Power Apps and Power
-                                Automate
-                            </p>
-                        </li>
-                        <li className="flex gap-4 items-center bg-primary-color rounded-xl p-3">
-                            <div className="w-1/12 h-1  bg-secondary-color rounded-lg"></div>
-                            <p className="text-text-color">
-                                Using Microsoft SQL data to create reporrts in
-                                SSRS
-                            </p>
-                        </li>
-                        <li className="flex gap-4 items-center bg-primary-color rounded-xl p-3">
-                            <div className="w-1/12 h-1  bg-secondary-color rounded-lg"></div>
-                            <p className="text-text-color">
-                                Creating manuals for users so they can use
-                                Software and Hardware faster and better
-                            </p>
-                        </li>
-                        <li className="flex gap-4 items-center bg-primary-color rounded-xl p-3">
-                            <div className="w-1/12 h-1  bg-secondary-color rounded-lg"></div>
-                            <p className="text-text-color">
-                                Managin PRTG Hosted Monitor instance
-                            </p>
-                        </li>
-                        <li className="flex gap-4 items-center bg-primary-color rounded-xl p-3">
-                            <div className="w-1/12 h-1  bg-secondary-color rounded-lg"></div>
-                            <p className="text-text-color">
-                                Doing reasearch about new topics and
-                                implementing them (moving intranet to
-                                Sharepoint)
-                            </p>
-                        </li>
+                        <SingleResonsibility
+                            text="  Developing apps using Power Apps and Power
+                                Automate"
+                        ></SingleResonsibility>
+                        <SingleResonsibility
+                            text="Using Microsoft SQL data to create reporrts in
+                            SSRS"
+                        ></SingleResonsibility>
+                        <SingleResonsibility
+                            text="Creating manuals for users so they can use
+                            Software and Hardware faster and better"
+                        ></SingleResonsibility>
+                        <SingleResonsibility text="Developing apps using Power Apps and Power Automate"></SingleResonsibility>
+                        <SingleResonsibility text="Managin PRTG Hosted Monitor instance"></SingleResonsibility>
+                        <SingleResonsibility
+                            text="Doing reasearch about new topics and
+                            implementing them (moving intranet to
+                            Sharepoint"
+                        ></SingleResonsibility>
                     </ul>
                 </div>
             </Section>
