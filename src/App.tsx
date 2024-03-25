@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
     return (
-        <div className="w-full min-h-screen bg-primary-color font-default flex flex-col gap-8">
+        <div className="w-full min-h-screen bg-primary-color font-default flex flex-col gap-24">
             <Navbar></Navbar>
             <MainPage></MainPage>
             <Projects></Projects>

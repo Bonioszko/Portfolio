@@ -8,7 +8,17 @@ import ExpressLogo from "../../public/icons/expressjs-icon.svg";
 import KotlinLogo from "../../public/icons/kotlin-16-svgrepo-com.svg";
 import SQLLogo from "../../public/icons/sql-file-format-svgrepo-com.svg";
 import cLogo from "../../public/icons/c.svg";
+import image1 from "../../public/TrainingApp.jpg";
+import image2 from "../../public/Portfolio.jpg";
+type ImageLinks = {
+    [key: string]: string;
+};
+const images: ImageLinks = {
+    TrainingApp: image1,
+    Portfolio: image2,
 
+    // Add more images as needed
+};
 type TechnologyLogos = {
     [key: string]: string;
 };
@@ -34,20 +44,21 @@ type ProjectProps = {
 
 const CurrentProject: React.FC<ProjectProps> = ({
     name,
-    imageLink,
+
     description,
     technologies,
     githubLink,
     liveSiteLink,
     active,
 }) => {
+    const image = images[name];
     return (
         <>
             {active ? (
                 <div className="flex flex-col sm:flex-row gap-3 animate-slideInFromLeft">
                     <div className="w-full">
                         <img
-                            src={imageLink}
+                            src={image}
                             alt={name}
                             className="w-full rounded-3xl border-2"
                         />
