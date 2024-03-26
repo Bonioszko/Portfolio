@@ -56,12 +56,22 @@ const CurrentProject: React.FC<ProjectProps> = ({
         <>
             {active ? (
                 <div className="flex flex-col sm:flex-row gap-3 animate-slideInFromLeft">
-                    <div className="w-full">
+                    <div className="w-full flex items-center justify-center relative group">
                         <img
                             src={image}
                             alt={name}
-                            className="w-full rounded-3xl border-2"
+                            className="w-full rounded-3xl border-2 group-hover:opacity-45"
                         />
+                        {liveSiteLink && (
+                            <div className="text-text-color absolute opacity-0 group-hover:opacity-100 group-hover:animate-slideInFromLeft">
+                                <a
+                                    href={liveSiteLink}
+                                    className="text-bold text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-lime-300 to-green-400"
+                                >
+                                    Site
+                                </a>
+                            </div>
+                        )}
                     </div>
                     <div className=" h-13 w-full flex flex-col items-center gap-5">
                         <h1 className="col text-text-color text-5xl">{name}</h1>
@@ -71,7 +81,7 @@ const CurrentProject: React.FC<ProjectProps> = ({
                                     key={technology}
                                     src={technologyLogos[technology]}
                                     alt={technology}
-                                    className="w-10 "
+                                    className="w-10"
                                 />
                             ))}
                         </div>

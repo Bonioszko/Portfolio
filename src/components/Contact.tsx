@@ -1,4 +1,10 @@
-import React, { FormEvent, useRef, useState, ChangeEvent } from "react";
+import React, {
+    FormEvent,
+    useRef,
+    useState,
+    ChangeEvent,
+    useEffect,
+} from "react";
 import emailjs, { EmailJSResponseStatus } from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,12 +15,13 @@ import { Slide } from "react-awesome-reveal";
 type Errors = {
     email?: string;
     message?: string;
-    captcha?: boolean;
+    captcha?: string;
 };
 export const Contact: React.FC = () => {
     const [captchaDone, setCaptchaDone] = useState(false);
     const form = useRef<HTMLFormElement>(null);
     const [errors, setErrors] = useState<Errors>({});
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
     const [changed, setChanged] = useState<{
         user_email: boolean;
         message: boolean;
@@ -27,6 +34,11 @@ export const Contact: React.FC = () => {
         user_name: "",
         message: "",
     });
+    useEffect(() => {
+        if (changed["user_email"] || changed["message"]) {
+            validateForm();
+        }
+    }, [formData]);
     const handleInputChange = (
         e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
     ) => {
@@ -36,6 +48,7 @@ export const Contact: React.FC = () => {
             ...formData,
             [name]: value,
         });
+        validateForm();
     };
 
     const validateForm = () => {
@@ -43,17 +56,24 @@ export const Contact: React.FC = () => {
         const newErrors = {
             email: "",
             message: "",
-            captcha: captchaDone,
+            captcha: "",
         };
-        if (!formData.user_email) {
+        if (!formData.user_email && changed.user_email) {
             newErrors.email = "Email is required";
             isValid = false;
-        } else if (!/\S+@\S+\.\S+/.test(formData.user_email)) {
+        } else if (
+            !/\S+@\S+\.\S+/.test(formData.user_email) &&
+            changed.user_email
+        ) {
             newErrors.email = "Email is not valid";
             isValid = false;
         }
         if (!formData.message) {
             newErrors.message = "Message is required";
+            isValid = false;
+        }
+        if (!captchaDone) {
+            newErrors.captcha = "Captcha is required";
             isValid = false;
         }
 
@@ -87,15 +107,19 @@ export const Contact: React.FC = () => {
                     message: "",
                 });
                 setErrors({});
-                form.current.reset(); // Reset the form
                 setCaptchaDone(false);
+                form.current.reset();
+                if (recaptchaRef.current) {
+                    recaptchaRef.current.reset();
+                }
             }
         } else {
-            // toast.error("Check captcha");
+            setChanged({ user_email: true, message: true });
         }
     };
     function onChange() {
         setCaptchaDone(true);
+        errors.captcha = "";
     }
     //add captcha there
     return (
@@ -115,7 +139,13 @@ export const Contact: React.FC = () => {
                             onChange={handleInputChange}
                             className="p-1 bg-primary-color border-2 border-secondary-color focus:outline-none focus:scale-110 rounded-lg w-56"
                         />
-                        <label>Email</label>
+
+                        <div className="w-56 flex justify-between">
+                            <label className="">Email</label>
+                            <div className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-red-500 to-pink-700">
+                                {errors.email}
+                            </div>
+                        </div>
                         <div
                             className={`w-56 ${
                                 changed["user_email"] &&
@@ -134,13 +164,21 @@ export const Contact: React.FC = () => {
                             />
                         </div>
 
-                        <label>Message</label>
+                        <div className="w-56 flex justify-between">
+                            <label className="">Message</label>
+                            {changed["message"] && !formData.message ? (
+                                <div className="bg-clip-text font-bold text-transparent bg-gradient-to-r from-red-500 to-pink-700">
+                                    {errors.message}
+                                </div>
+                            ) : null}
+                        </div>
+
                         <div
                             className={`w-56   ${
                                 changed["message"] && !formData.message
                                     ? "bg-gradient-to-r from-red-500 to-pink-700"
                                     : "bg-secondary-color"
-                            } pt-1 px-1 rounded-lg focus-within:scale-105 `}
+                            } pt-2 px-2 rounded-lg focus-within:scale-105 `}
                         >
                             <textarea
                                 name="message"
@@ -148,12 +186,24 @@ export const Contact: React.FC = () => {
                                 className="p-1 bg-primary-color border-2 focus:outline-none border-transparent rounded-lg w-full h-full"
                             />
                         </div>
-                        <ReCAPTCHA
-                            sitekey="6LfD85opAAAAAM9edr0f03lTH0pYwHfR7TXNNVqc"
-                            onChange={onChange}
-                            onExpired={() => setCaptchaDone(false)}
-                            theme="dark"
-                        />
+                        <div className=" w-full text-end bg-clip-text font-bold text-transparent bg-gradient-to-r from-red-500 to-pink-700">
+                            {errors.captcha}
+                        </div>
+                        <div
+                            className={`  ${
+                                errors.captcha
+                                    ? "bg-gradient-to-r from-red-500 to-pink-700"
+                                    : "bg-secondary-color"
+                            } p-1 pt-1.5 pl-1.5 rounded-lg focus-within:scale-105`}
+                        >
+                            <ReCAPTCHA
+                                ref={recaptchaRef}
+                                sitekey="6LfD85opAAAAAM9edr0f03lTH0pYwHfR7TXNNVqc"
+                                onChange={onChange}
+                                onExpired={() => setCaptchaDone(false)}
+                                theme="dark"
+                            />
+                        </div>
                         <input
                             type="submit"
                             value="Send"

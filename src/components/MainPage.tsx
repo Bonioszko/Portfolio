@@ -32,8 +32,9 @@ function MainPage() {
                             <Technology text="C++"></Technology>
                         </div>
                         <p className="text-text-color text-center text-lg sm:text-4xl">
-                            I am third year computer science student at put. My
-                            passions besides web development is gym
+                            Third year computer science student at Poznan
+                            University Of Technology. Passionate in web
+                            development and gym
                         </p>
                         <div className="flex justify-center gap-5">
                             <a

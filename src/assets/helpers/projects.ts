@@ -6,7 +6,7 @@ const data = [
             "I wanted to create application to track my personal trainings. Application allows you to create your own trainings and exercises. Based on created trainings you cancreate specific training with repetitions, sets and weight used. Interesting functionality is a built in timer, so youdo not need to use separate application to track timebetween sets. To access content you need to firstly register and then login into your account",
         technologies: ["React", "Express", "MongoDB"],
         githubLink: "https://github.com/Bonioszko/TrainingApp",
-        liveSiteLink: "trainingappfull.onrender.com",
+        liveSiteLink: "https://trainingappfull.onrender.com/",
     },
     {
         name: "Portfolio",
