@@ -37,9 +37,7 @@ export default {
                 "text-color": "var(--text-color)",
                 "test-color": "var(--test-color)",
             },
-            fontFamily: {
-                default: ["Mukta"],
-            },
+
             spacing: {
                 "1/8": "12.5%",
             },

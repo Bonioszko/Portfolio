@@ -82,6 +82,7 @@ export const Contact: React.FC = () => {
     };
     const sendEmail = (e: FormEvent) => {
         e.preventDefault();
+        setChanged({ user_email: true, message: true });
         if (validateForm()) {
             if (form.current) {
                 emailjs
@@ -121,7 +122,7 @@ export const Contact: React.FC = () => {
         setCaptchaDone(true);
         errors.captcha = "";
     }
-    //add captcha there
+
     return (
         <>
             <Slide direction="left" triggerOnce={true}>
@@ -132,7 +133,10 @@ export const Contact: React.FC = () => {
                         className=" text-text-color flex flex-col justify-center items-center gap-2"
                     >
                         <SectionHeading text="Contact me"></SectionHeading>
-                        <label>Name</label>
+                        <div className="w-56 flex justify-start">
+                            <label className="">Name</label>
+                        </div>
+
                         <input
                             type="text"
                             name="user_name"
