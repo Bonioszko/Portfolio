@@ -12,30 +12,30 @@ function WorkExperience() {
                         Air Spiralo Poland - Information Communication
                         Technology Support
                     </h2>
+                    <h1 className="text-3xl text-center text-text-color"></h1>
                     <h1 className="text-3xl text-center text-text-color">
                         My responsibilities
                     </h1>
 
                     <ul className="gap-4 flex flex-col">
                         <SingleResonsibility
-                            text="  Developing apps using Power Apps and Power
-                                Automate"
+                            text="Developing apps using Power Apps and Power
+                                Automate (ex. User request, tracking signed documents, tracking scrap)"
                         ></SingleResonsibility>
                         <SingleResonsibility
-                            text="Using Microsoft SQL data to create reporrts in
-                            SSRS"
+                            text="Creating reports in
+                            SSRS using SQL data, creating new and chaning existing stored procedures"
                         ></SingleResonsibility>
-                        <SingleResonsibility
-                            text="Creating manuals for users so they can use
-                            Software and Hardware faster and better"
-                        ></SingleResonsibility>
-                        <SingleResonsibility text="Developing apps using Power Apps and Power Automate"></SingleResonsibility>
-                        <SingleResonsibility text="Managin PRTG Hosted Monitor instance"></SingleResonsibility>
+
                         <SingleResonsibility
                             text="Doing reasearch about new topics and
-                            implementing them (moving intranet to
-                            Sharepoint"
+                            implementing them (ex. moving intranet to
+                            Sharepoint)"
                         ></SingleResonsibility>
+
+                        <SingleResonsibility text="Managing PRTG Hosted Monitor instance"></SingleResonsibility>
+
+                        <SingleResonsibility text="Creating manuals for users so they can use software and hardware"></SingleResonsibility>
                     </ul>
                 </div>
             </Section>

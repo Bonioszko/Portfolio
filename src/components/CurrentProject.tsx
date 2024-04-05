@@ -10,10 +10,12 @@ import SQLLogo from "../../public/icons/sql-file-format-svgrepo-com.svg";
 import cLogo from "../../public/icons/c.svg";
 import image1 from "../../public/TrainingApp.jpg";
 import image2 from "../../public/Portfolio.jpg";
+import image from "../../public/PaymentPal.jpg";
 type ImageLinks = {
     [key: string]: string;
 };
 const images: ImageLinks = {
+    PaymentPal: image,
     TrainingApp: image1,
     Portfolio: image2,
 
