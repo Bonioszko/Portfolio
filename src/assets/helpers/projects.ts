@@ -3,7 +3,7 @@ const data = [
         name: "PaymentPal",
         imageLink: "../../public/PaymentPal.jpg",
         description:
-            "App to manage bills for landlors. Login was done using cookies and JWT token. I created MongoDB database and API endpoints to access it from fontend. Landlord can easily send email to tenant (implemented with nodemailer). App supports English and Polish language  (my parents does not speak English and they inspired my app)",
+            "App to manage bills for landlors. User can kepp track of their apartments and invoices related to them. Landlord can easily send an email to tenant without leaving the application. App supports English and Polish language",
         technologies: ["React", "Express", "MongoDB", "Tailwind", "Typescript"],
         githubLink: "https://github.com/Bonioszko/BillTracker",
         liveSiteLink: "https://paymentpal.onrender.com/",
@@ -23,27 +23,8 @@ const data = [
         description:
             "This is my personal website to showcase myself and my skills in creating appealing and responsive webistes",
         technologies: ["React", "Tailwind", "Typescript"],
-        githubLink: "ss",
-        liveSiteLink: "trainingappfull.onrender.com",
+        githubLink: "https://github.com/Bonioszko/Portfolio",
+        liveSiteLink: "https://bonioszko.github.io/Portfolio/",
     },
-    // {
-    //     name: "BoardGameCollector",
-    //     imageLink: "https://example.com/image3.jpg",
-    //     description:
-    //         "This project was part of my mobile application course at my uni. BoardGamesGeek about is used to get data about boardgames. Application stores data in SQL database and we can synchronize it with our BoardGamesGeek account.  ",
-    //     technologies: ["Kotlin", "SQL"],
-    //     githubLink: "https://github.com/Bonioszko/BoardGameCollector",
-    //     liveSiteLink: null,
-    // },
-    // {
-    //     name: "TCP Server",
-    //     imageLink: "https://example.com/image3.jpg",
-    //     description:
-    //         "This project was part of my computer networks course at my uni. The assignment was to create TCP server that allows multiple clients to communicate between each other. As a client we can see every other client and if we have rights we can shutdown other client",
-    //     technologies: ["C"],
-    //     githubLink: "https://github.com/Bonioszko/ComputerNetworkProject",
-    //     liveSiteLink: null,
-    // },
-    // Add more objects as needed
 ];
 export default data;

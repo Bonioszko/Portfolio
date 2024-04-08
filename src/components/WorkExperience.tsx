@@ -24,7 +24,7 @@ function WorkExperience() {
                         ></SingleResonsibility>
                         <SingleResonsibility
                             text="Creating reports in
-                            SSRS using SQL data, creating new and chaning existing stored procedures"
+                            SSRS using SQL data, creating new and changing existing stored procedures"
                         ></SingleResonsibility>
 
                         <SingleResonsibility
