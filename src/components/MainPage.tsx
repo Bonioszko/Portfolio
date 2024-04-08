@@ -28,13 +28,13 @@ function MainPage() {
                                 {" "}
                                 <Technology text="React"></Technology>
                                 <Technology text="Express"></Technology>
-                                <Technology text="Python"></Technology>
+                                <Technology text="Typescript"></Technology>
                             </div>
                             <div className="flex gap-1 sm:gap-3">
                                 {" "}
                                 <Technology text="MongoDB"></Technology>
                                 <Technology text="SQL"></Technology>
-                                <Technology text="C++"></Technology>
+                                <Technology text="Python"></Technology>
                             </div>
                         </div>
                         <p className="text-text-color text-center text-lg sm:text-4xl">
