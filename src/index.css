@@ -43,3 +43,23 @@ body {
   /* font-family: 'Ubuntu', sans-serif; */
   font-family: 'Outfit', sans-serif;
 }
+@layer base {
+  /* width */
+
+  @layer base {
+    /* width */
+    ::-webkit-scrollbar {
+      @apply w-2
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      @apply bg-primary-color
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      @apply bg-gradient-to-b from-lime-300 to-green-400 rounded-xl
+    }
+  }
+}
