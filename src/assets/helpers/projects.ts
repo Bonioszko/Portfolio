@@ -21,7 +21,7 @@ const data = [
         name: "Portfolio",
         imageLink: "../../public/Portfolio.jpg",
         description:
-            "This is my personal website to showcase myself and my skills in creating appealing and responsive webistes",
+            "This is my personal website to showcase my skills in creating appealing and responsive webistes",
         technologies: ["React", "Tailwind", "Typescript"],
         githubLink: "https://github.com/Bonioszko/Portfolio",
         liveSiteLink: "https://bonioszko.github.io/Portfolio/",
