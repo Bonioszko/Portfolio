@@ -3,7 +3,7 @@ const data = [
         name: "PaymentPal",
         imageLink: "../../public/PaymentPal.jpg",
         description:
-            "App to manage bills for landlors. User can kepp track of their apartments and invoices related to them. Landlord can easily send an email to tenant without leaving the application. App supports English and Polish language",
+            "App to manage bills for landlords. Users can keep track of their apartments and the invoices related to them. Landlords can easily send emails to tenants without leaving the application. The app supports English and Polish languages",
         technologies: ["React", "Express", "MongoDB", "Tailwind", "Typescript"],
         githubLink: "https://github.com/Bonioszko/BillTracker",
         liveSiteLink: "https://paymentpal.onrender.com/",
