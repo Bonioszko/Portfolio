@@ -19,7 +19,8 @@ function WorkExperience() {
                     </h1>
 
                     <ul className="gap-4 flex flex-col">
-                        <SingleResonsibility text="Developing apps in the MERN stack "></SingleResonsibility>
+                        <SingleResonsibility text="Developing responsive websites using React for an international clients"></SingleResonsibility>
+                        <SingleResonsibility text="Designed and implemented an internal API using FastAPI, streamlining data management and improving internal processes"></SingleResonsibility>
                     </ul>
                     <h2 className="text-2xl  bg-gradient-to-r to-lime-300 from-green-400 text-primary-color font-bold p-2 rounded-xl">
                         Air Spiralo Poland - Information Communication
